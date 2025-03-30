@@ -1,0 +1,31 @@
+def print_design(character,rows):
+    p=2
+    q=2
+    r=(rows*2)-3
+    for i in range(rows*2+1):
+        if i==0:
+            for j in range(rows*2):
+                print(character,end=' ')
+        if i>0 and i<=rows-1:
+            for k in range((rows*2-p)//2):
+                print(character,end=' ')
+            for l in range(p):
+                print(" ",end=' ')
+            for m in range(((rows*2-p)//2)):
+                print(character,end=' ')
+            p=p+2
+        if i>=rows and i<=rows*2-2:
+            for o in range(q):
+                print(character,end=' ')
+            for n in range(r):
+                print(" ",end=' ')
+            for o in range(q-1):
+                print(character,end=' ')
+            q=q+1
+            r=r-2 
+        # if i>rows*2:
+        #     for j in range(rows*2):
+        #        print(character,end=' ')
+        print()
+
+print_design("*",9)
